@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    background-color: rgb(23, 23, 23);
+    .weather_container{
+        min-height: 100vh;
+        background: {
+            image: url(/src/imgs/day/cloudy.jpg);
+            repeat: no-repeat;
+            position: center;
+            size: cover;            
+        }
+        color: #fff;
+        position: relative;
+        transition: 500ms;
+        opacity: 1;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0, 0.3);
+            z-index: 0;
+        }  
+        .container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2em 3em 4em 3em;
+            > div{
+                display: flex;
+                justify-content: space-between;
+                align-items:flex-end;
+                .date{
+                    margin: 0 0.5em;
+                }
+                .city{
+                    margin: 0.3em 0;
+                    font-size: 2em;
+                }
+                .condition{
+                    margin: 0.3em 0;
+                    font-size: 1.5em;
+                }
+                .temp{
+                    margin: 0;
+                    font-size: 10em;
+                }
+            }
+            .container_header{
+                align-items: center;
+            }
+            .header_date{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            form{
+                position: relative;
+                input{
+                    background-color: transparent;
+
+                    border: 1px solid white;
+                    padding: 0.7em;
+                    border-radius: 5px;
+                    outline: none;
+                    width: 20em;
+                    &::placeholder{
+                        color: white;
+                        font-size: 1.2em;
+                    }
+                    &:focus{
+                        color: #fff;
+                    }
+                }
+                button{
+                    position: absolute;
+                    right: 0;
+                    background: transparent;
+                    border: 1px solid transparent;
+                    border: none;
+                    padding: 0.7em;
+                    border-radius: 5px;
+                    color: #fff;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .body_right{
+                // background-color: rgb(164, 102, 226);
+                width: 60%;
+                height: 35em;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                .daily_widget{
+                    // display: flex;
+                    // justify-content: start;
+                    ul{
+                        // height: 20em;
+                        // background-color: red;
+                        li{
+                            &:first-child{
+                                border-top-right-radius: 5px;
+                                border-top-left-radius: 5px;
+                            }
+                            &:last-child{
+                                border-bottom-right-radius:  5px;
+                                border-bottom-left-radius: 5px;
+                            }
+                            background-color: rgb(110, 110, 110, 0.25);
+                            backdrop-filter: blur(10px);
+                            padding: 0 1em;
+                            list-style-type: none;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 14em;
+                            height: 4em;
+                            font-size: 1.5em;
+                            div{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }              
+                }
+                .cloudinfo{
+                    display: flex;
+                    justify-content: end;
+                    .under_cloud{
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: column;
+                        justify-content: center;
+                        > div{
+                            width: 16em;
+                            height: 4em;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            position: relative;
+                            padding: 0;
+                            
+                        }
+                        .icon_info{
+                            // padding: 0 5px 7px 5px;
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 20em;
+                                height: 2px;
+                                background-image: linear-gradient(to right, rgba(0, 0, 0, 0.448) , rgb(147, 147, 147));
+                            }
+                        }
+                        .text_info{
+                            height: 2em;
+                            font-size: 1.1em;
+                            padding-left: 15px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8579b38148.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="icon" href="/src/icons/night/200.png">
+    <script src="src/main.js" defer></script>
+    <title>weather app</title>
+</head>
+<body>
+    <div class="weather_container">
+        <div class="container">
+            <div class="container_header">
+                <div class="header_date">
+                    <img src="./src/icons/day/113.png" alt="err" width="50" height="50">
+                    <h3 class="date">05 SEPTEMBER</h3>
+                </div>
+                <div class="header_searchbar">
+                    <form id="locationInput">
+                        <input type="search" class="search" placeholder="search location">
+                        <button type="submit" class="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="container_body">
+                <div class="body_left">
+                    <h1 class="temp">23&#176;</h1>
+                    <p class="city">SOFIA, BULGARIA</p>
+                    <p class="condition">PARTLY CLOUDY</p>
+                </div>
+                <div class="body_right">
+                    <div class="daily_widget">
+                        <ul>
+                            <li>
+                                <div>14:00</div> 
+                                <div>25<img src="./src/icons/day/113.png" alt="err" width="50" height="50"></div> 
+                            </li>
+                            <li>
+                                <div>14:00</div> 
+                                <div>25<img src="./src/icons/day/113.png" alt="err" width="50" height="50"></div> 
+                            </li>
+                            <li>
+                                <div>14:00</div> 
+                                <div>25<img src="./src/icons/day/113.png" alt="err" width="50" height="50"></div> 
+                            </li>
+                            <li>
+                                <div>14:00</div> 
+                                <div>25<img src="./src/icons/day/113.png" alt="err" width="50" height="50"></div> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cloudinfo">
+                        <div class="under_cloud">
+                            <div class="icon_info">
+                                <div class="humidity"><img src="./src/icons/all/himidity1.svg" alt="err" width="50" height="50"></div>
+                                <div class="wind"><img src="./src/icons/all/wind1.svg" alt="err" width="50" height="50"></div>                            
+                            </div>
+                            <div class="text_info">
+                                <div class="humidity">Humidity</div>
+                                <div class="wind">4 Km/h</div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+</body>
+</html>
