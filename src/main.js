@@ -35,7 +35,7 @@ function getMonths(month, day, year){
     return month_arr[new Date(`${month}/${day}/${year}`).getMonth()]
 }
 function fetchWeather(){
-    fetch(`http://api.weatherapi.com/v1/current.json?key=dc448c8304464dbd9fa101722223007&q=${city_input}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=dc448c8304464dbd9fa101722223007&q=${city_input}`)
     .then(Response => Response.json())
     .then(data=> {
         temp.innerHTML = data.current.temp_c;
